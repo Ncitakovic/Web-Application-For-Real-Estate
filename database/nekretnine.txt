@@ -1,0 +1,361 @@
+{
+    "_id" : ObjectId("60b92005afc37e44fdef7122"),
+    "id" : 2,
+    "naziv" : "prostoran stan na konjarniku",
+    "adresa" : {
+        "grad" : "Beograd",
+        "opstina" : "Konjarnik",
+        "ulica" : "Glasinacka",
+        "broj" : 7
+    },
+    "kucaIliStan" : "stan",
+    "kucaBrSpratova" : -1,
+    "stanSprat" : 4,
+    "stanUkupnoSpratova" : 5,
+    "kvadratura" : 63,
+    "brSoba" : "cetvorosoban",
+    "jeNamestena" : true,
+    "galerija" : [ 
+        {
+            "slika" : "21.jpg"
+        }, 
+        {
+            "slika" : "22.jpg"
+        }, 
+        {
+            "slika" : "23.jpg"
+        }
+    ],
+    "izdajeIliProdaje" : "prodaje",
+    "cena" : 70000,
+    "vlasnik" : 2,
+    "promovisana" : true,
+    "odobrena" : true
+}
+{
+    "_id" : ObjectId("60b77df2afc37e44fdef19d8"),
+    "galerija" : [ 
+        {
+            "slika" : "11.jpg"
+        }, 
+        {
+            "slika" : "12.jpg"
+        }, 
+        {
+            "slika" : "13.jpg"
+        }
+    ],
+    "id" : 1,
+    "naziv" : "prostoran stan na zvezdari",
+    "adresa" : {
+        "grad" : "Beograd",
+        "opstina" : "Zvezdara",
+        "ulica" : "Dimitrija Tucovica",
+        "broj" : 158
+    },
+    "kucaIliStan" : "stan",
+    "kucaBrSpratova" : -1,
+    "stanSprat" : 4,
+    "stanUkupnoSpratova" : 5,
+    "kvadratura" : 80,
+    "brSoba" : "trosoban",
+    "jeNamestena" : true,
+    "izdajeIliProdaje" : "izdaje",
+    "cena" : 200,
+    "vlasnik" : 1,
+    "promovisana" : true,
+    "__v" : 0,
+    "odobrena" : true
+}
+{
+    "_id" : ObjectId("60d7771fb422500db023e5d9"),
+    "galerija" : [ 
+        {
+            "slika" : "31.jpg"
+        }, 
+        {
+            "slika" : "32.jpg"
+        }, 
+        {
+            "slika" : "33.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "Beograd",
+        "opstina" : "Vracar",
+        "ulica" : "Krunska",
+        "broj" : "4"
+    },
+    "odobrena" : true,
+    "naziv" : "prostoran stan na Vracaru",
+    "kucaIliStan" : "stan",
+    "stanSprat" : 3,
+    "stanUkupnoSpratova" : 4,
+    "kvadratura" : 57,
+    "brSoba" : "3",
+    "jeNamestena" : true,
+    "izdajeIliProdaje" : "izdaje",
+    "cena" : 60000,
+    "vlasnik" : 1,
+    "id" : 3,
+    "__v" : 0,
+    "promovisana" : true
+}
+{
+    "_id" : ObjectId("60d77f58b422500db023e5da"),
+    "galerija" : [ 
+        {
+            "slika" : "41.jpg"
+        }, 
+        {
+            "slika" : "42.jpg"
+        }, 
+        {
+            "slika" : "43.jpg"
+        }
+    ],
+    "adresa" : {
+        "ulica" : "Milana Jesica",
+        "broj" : "3",
+        "grad" : "Novi Sad",
+        "opstina" : "Becej"
+    },
+    "odobrena" : true,
+    "vlasnik" : 1,
+    "naziv" : "kuca u NS",
+    "kucaIliStan" : "kuca",
+    "kucaBrSpratova" : 2,
+    "kvadratura" : 80,
+    "izdajeIliProdaje" : "prodaje",
+    "cena" : 90000,
+    "jeNamestena" : true,
+    "brSoba" : "5",
+    "id" : 4,
+    "__v" : 0,
+    "promovisana" : true
+}
+{
+    "_id" : ObjectId("60d83fa3b58a04232cc5f29d"),
+    "galerija" : [ 
+        {
+            "slika" : "51.jpg"
+        }, 
+        {
+            "slika" : "52.jpg"
+        }, 
+        {
+            "slika" : "53.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "Novi Sad",
+        "opstina" : "Novi sad",
+        "ulica" : "negotinska ",
+        "broj" : "4"
+    },
+    "odobrena" : true,
+    "vlasnik" : 4,
+    "naziv" : "kuca u negotinskoj",
+    "kucaIliStan" : "kuca",
+    "kucaBrSpratova" : 2,
+    "kvadratura" : 82,
+    "brSoba" : "4",
+    "jeNamestena" : true,
+    "izdajeIliProdaje" : "prodaje",
+    "cena" : 95000,
+    "id" : 5,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60d98013a0d5b84e40041d43"),
+    "galerija" : [ 
+        {
+            "slika" : "41.jpg"
+        }, 
+        {
+            "slika" : "42.jpg"
+        }, 
+        {
+            "slika" : "43.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "Novi Sad",
+        "opstina" : "Novi sad",
+        "ulica" : "milana janica ",
+        "broj" : "6"
+    },
+    "odobrena" : true,
+    "vlasnik" : 2,
+    "naziv" : "kuca u milana janica",
+    "kucaIliStan" : "kuca",
+    "kucaBrSpratova" : 3,
+    "kvadratura" : 53,
+    "brSoba" : "4",
+    "jeNamestena" : true,
+    "izdajeIliProdaje" : "izdaje",
+    "cena" : 500,
+    "id" : 6,
+    "__v" : 0,
+    "promovisana" : false
+}
+{
+    "_id" : ObjectId("60dc439d5dfa8322dccb78e4"),
+    "galerija" : [ 
+        {
+            "slika" : "41.jpg"
+        }, 
+        {
+            "slika" : "42.jpg"
+        }, 
+        {
+            "slika" : "43.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "Novi Sad",
+        "opstina" : "Novi Sad",
+        "ulica" : "ulica 1",
+        "broj" : "5"
+    },
+    "odobrena" : true,
+    "vlasnik" : 2,
+    "kucaIliStan" : "kuca",
+    "kucaBrSpratova" : 3,
+    "kvadratura" : 60,
+    "brSoba" : "4",
+    "jeNamestena" : true,
+    "naziv" : "kuca u Novom sadu",
+    "izdajeIliProdaje" : "prodaje",
+    "cena" : 40000,
+    "id" : 7,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60e341440f3cf44bdc7c181d"),
+    "galerija" : [ 
+        {
+            "slika" : "nis1.jpg"
+        }, 
+        {
+            "slika" : "nis2.jpg"
+        }, 
+        {
+            "slika" : "nis3.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "nis",
+        "opstina" : "nis",
+        "ulica" : "ulica1",
+        "broj" : "4"
+    },
+    "odobrena" : true,
+    "vlasnik" : 1,
+    "naziv" : "velika kuca u nisu",
+    "kucaIliStan" : "kuca",
+    "stanUkupnoSpratova" : 4,
+    "kvadratura" : 65,
+    "brSoba" : "4",
+    "izdajeIliProdaje" : "prodaje",
+    "cena" : 65000,
+    "id" : 8,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60e580d90906823b386df512"),
+    "galerija" : [ 
+        {
+            "slika" : "nis1.jpg"
+        }, 
+        {
+            "slika" : "nis2.jpg"
+        }, 
+        {
+            "slika" : "nis3.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "nis",
+        "opstina" : "ops3",
+        "ulica" : "ul3",
+        "broj" : "3"
+    },
+    "odobrena" : true,
+    "vlasnik" : 1,
+    "naziv" : "kucaNis",
+    "kucaIliStan" : "kuca",
+    "kucaBrSpratova" : 3,
+    "cena" : 92000,
+    "izdajeIliProdaje" : "prodaje",
+    "brSoba" : "5",
+    "kvadratura" : 82,
+    "id" : 9,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60e5b4910906823b386df522"),
+    "galerija" : [ 
+        {
+            "slika" : "nis1.jpg"
+        }, 
+        {
+            "slika" : "nis2.jpg"
+        }, 
+        {
+            "slika" : "nis3.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "nis",
+        "opstina" : "o",
+        "ulica" : "u",
+        "broj" : "4"
+    },
+    "odobrena" : true,
+    "vlasnik" : 3,
+    "naziv" : "niiiis",
+    "kucaIliStan" : "kuca",
+    "kucaBrSpratova" : 4,
+    "kvadratura" : 88,
+    "brSoba" : "5",
+    "izdajeIliProdaje" : "prodaje",
+    "cena" : 110000,
+    "id" : 10,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60e70b591f5bea33a4f3c011"),
+    "galerija" : [ 
+        {
+            "slika" : "101.jpg"
+        }, 
+        {
+            "slika" : "102.jpg"
+        }, 
+        {
+            "slika" : "103.jpg"
+        }
+    ],
+    "adresa" : {
+        "grad" : "Beograd",
+        "opstina" : "mirijevo",
+        "ulica" : "u",
+        "broj" : "3"
+    },
+    "odobrena" : true,
+    "vlasnik" : 2,
+    "naziv" : "stan na mirijevu",
+    "kucaIliStan" : "stan",
+    "stanSprat" : 3,
+    "stanUkupnoSpratova" : 4,
+    "kvadratura" : 55,
+    "brSoba" : "4",
+    "izdajeIliProdaje" : "prodaje",
+    "cena" : 65000,
+    "id" : 11,
+    "__v" : 0,
+    "promovisana" : false
+}
+
+
