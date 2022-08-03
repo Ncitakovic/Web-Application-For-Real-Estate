@@ -1,0 +1,33 @@
+{
+    "_id" : ObjectId("60eebd443097e84560968f7f"),
+    "idK" : 1,
+    "idV" : 2,
+    "idN" : 11,
+    "nazivNekretnine" : "stan na mirijevu",
+    "ponuda" : "luka 10k",
+    "odobrena" : false,
+    "id" : 1,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60eebd583097e84560968f80"),
+    "idK" : 4,
+    "idV" : 2,
+    "idN" : 11,
+    "nazivNekretnine" : "stan na mirijevu",
+    "ponuda" : "mika 30k",
+    "odobrena" : false,
+    "id" : 2,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60eebd723097e84560968f81"),
+    "idK" : 5,
+    "idV" : 2,
+    "idN" : 11,
+    "nazivNekretnine" : "stan na mirijevu",
+    "ponuda" : "vlada 40k",
+    "odobrena" : false,
+    "id" : 3,
+    "__v" : 0
+}
