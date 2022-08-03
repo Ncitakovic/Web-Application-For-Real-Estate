@@ -1,0 +1,33 @@
+<br/><br/><br/><br/><br/><br/>
+
+<h3>Sign in:</h3>
+<form>
+  <table>
+      <tr>
+          <td>Stara lozinka:</td>
+          <td>
+              <input type='text' name='stara_lozinka' [(ngModel)]='stara_lozinka'>
+          </td>
+      </tr>
+      <tr>
+          <td>Nova lozinka:</td>
+          <td>
+              <input type='text' name='nova_lozinka' [(ngModel)]='nova_lozinka'>
+          </td>
+      </tr>
+      <tr>
+        <td>Potvrda nove lozinke:</td>
+        <td>
+            <input type='text' name='potvrda_nove' [(ngModel)]='potvrda_nove'>
+        </td>
+    </tr>
+      <tr>
+          <td colspan='2'>
+              <button (click)='promeni()'>Promeni lozinku</button>
+          </td>
+      </tr>
+  </table>
+  <div *ngIf='poruka' class='greska'>
+      {{poruka}}
+  </div>
+</form>

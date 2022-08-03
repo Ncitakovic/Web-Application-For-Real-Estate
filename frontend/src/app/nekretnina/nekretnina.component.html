@@ -1,0 +1,62 @@
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+<!-- izmeniti izdaje i prodaje iz ngif -->
+<h2>view count: {{viewCount}}</h2>
+<br/><br/>
+
+<form>
+  <table border="1" *ngIf="izdajeProdaje=='izdaje'">
+      <tr>
+          <td>Datum od:</td>
+          <td>
+              <input type='text' name='datumOd' [(ngModel)]='datumOd'>
+          </td>
+      </tr>
+      <tr>
+          <td>Datum do:</td>
+          <td>
+              <input type='text' name='datumDo' [(ngModel)]='datumDo'>
+          </td>
+      </tr>
+      <tr>
+          <td colspan='2'>
+              <button (click)='iznajmi()'>Iznajmi</button>
+          </td>
+      </tr>
+  </table>
+  <div *ngIf='poruka' class='greska'>
+      {{poruka}}
+  </div>
+</form>
+<div *ngIf="izdajeProdaje=='prodaje'">
+  Gotovina ili kredit?
+  <br/>
+  <input type="radio" name="kreditgotovina" value="gotovina" [(ngModel)]='gotovina'>gotovina
+  <input type="radio" name="kreditgotovina" value="kredit" [(ngModel)]='kredit'>kredit
+  <p *ngIf='kredit'>
+    <b>Za ucesce morate izdvojiti {{nekretnina.cena*0.20}}</b>
+  </p>
+</div>
+
+
+<hr/>
+<!-- KONTAKTIRANJE VLASNIKA NEKRETNINE -->
+<button (click)=kontaktirajVlasnika()>Kontaktiraj vlasnika</button>
+<form>
+  <table *ngIf='prikazi'>
+    <tr>
+      <td><b>Naslov poruke:</b></td>
+      <td>{{nekretnina.naziv}}</td>
+    </tr>
+    <tr>
+      <td><b>Sadrzaj:</b></td>
+      <td>
+        <textarea [(ngModel)]='sadrzajPoruke' name="poruka"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <button (click)='dajPonudu()'>Daj ponudu</button>
+    </tr>
+  </table>
+</form>

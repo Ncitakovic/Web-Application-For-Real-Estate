@@ -1,0 +1,22 @@
+.promovisana {
+  color: aqua;
+}
+#divChart {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+#divChart2 {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+#divChart34 {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+
+.odobrena {
+  color: green;
+}

@@ -1,0 +1,148 @@
+<br/><br/><br/>
+<h1>Home Page</h1>
+<h3>Sign in:</h3>
+<form>
+  <table>
+      <tr>
+          <td>Korime:</td>
+          <td>
+              <input type='text' name='kor_ime' [(ngModel)]='kor_ime'>
+          </td>
+      </tr>
+      <tr>
+          <td>Lozinka:</td>
+          <td>
+              <input type='password' name='lozinka' [(ngModel)]='lozinka'>
+          </td>
+      </tr>
+      <tr>
+          <td colspan='2'>
+              <button (click)='prijava()'>Prijava</button>
+          </td>
+      </tr>
+  </table>
+  <div *ngIf='poruka' class='greska'>
+      {{poruka}}
+  </div>
+</form>
+<hr/>
+<h3>Sign up:</h3>
+<a routerLink='register'>registruj se</a>
+<hr/>
+
+<h3>Promoted properties:</h3>
+
+<div class="row card-group">
+  <div class="col-sm-6"  *ngFor = "let n of promovisaneNekretnine">
+
+<div class="card" style="width: 18rem;"
+
+>
+  <img class="card-img-top" width='100px' height='100px' src='/assets/{{randomSlikePromotedGen[n.id-1].slika}}' alt="Card image cap">
+  <!-- <img width='100px' height='100px' src='assets/{{k.id}}.jpg'> -->
+  <div class="card-body">
+    <!-- <h5 class="card-title">{{n.naziv}}</h5> -->
+    <p class="card-text" > Grad:  {{n.adresa.grad}}</p>
+    <p class="card-text">Opstina: {{n.adresa.opstina}}</p>
+    <p class="card-text">Cena: {{n.cena}}</p>
+    <p class="card-text">Tip:
+      <span *ngIf="n.kucaIliStan === 'stan'">{{n.brSoba}} stan </span>
+      <span *ngIf="n.kucaIliStan === 'kuca'">Kuca</span>
+    </p>
+    <p class="card-text"> Kvadratura: {{n.kvadratura}}</p>
+    <p class="card-text"> Izdaje ili prodaje: {{n.izdajeIliProdaje}}</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+<a name='pregled'></a>
+
+<h3>Search for properties:</h3>
+<form>
+  <table>
+      <tr>
+          <td>Grad:</td>
+          <td>
+              <input type='text' name='grad' [(ngModel)]='grad'>
+          </td>
+      </tr>
+      <tr>
+          <td>Cena od:</td>
+          <td>
+              <input type='text' name='cenaOd' [(ngModel)]='cenaOd'>
+          </td>
+      </tr>
+      <tr>
+        <td>Cena do:</td>
+        <td>
+            <input type='text' name='cenaDo' [(ngModel)]='cenaDo'>
+        </td>
+      </tr>
+      <tr>
+          <td colspan='2'>
+              <button (click)='pretrazi()'>Pretrazi</button>
+          </td>
+      </tr>
+  </table>
+  <div *ngIf='porukaPretraga' class='greska'>
+      {{porukaPretraga}}
+  </div>
+</form>
+
+<!-- ngFor ubaciti kod prvog div class="card" posle style i ukloniti prve 2 linije dole i poslednje 2 linije div -->
+<div class="row card-group">
+  <div class="col-sm-6"  *ngFor = "let n of nekretninePretraga">
+
+<div class="card" style="width: 18rem;" >
+  <img class="card-img-top" width='100px' height='100px' src='/assets/{{randomSlikeGen[n.id-1].slika}}' alt="Card image cap">
+  <!-- <img width='100px' height='100px' src='assets/{{k.id}}.jpg'> -->
+  <div class="card-body">
+    <!-- <h5 class="card-title">{{n.naziv}}</h5> -->
+    <p class="card-text" > Grad:  {{n.adresa.grad}}</p>
+    <p class="card-text">Opstina: {{n.adresa.opstina}}</p>
+    <p class="card-text">Cena: {{n.cena}}</p>
+    <p class="card-text">Tip:
+      <span *ngIf="n.kucaIliStan === 'stan'">{{n.brSoba}} stan </span>
+      <span *ngIf="n.kucaIliStan === 'kuca'">Kuca</span>
+    </p>
+    <p class="card-text"> Kvadratura: {{n.kvadratura}}</p>
+    <p class="card-text"> Izdaje ili prodaje: {{n.izdajeIliProdaje}}</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
+
+</div>
+</div>
+
+
+
+<!-- <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+  <mat-card *ngFor="let n of nekretninePretraga" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{n.naziv}}</mat-card-title>
+      <mat-card-subtitle>{{member.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="member.url" alt="Photo of {{n.naziv}}">
+    <mat-card-content>
+      <p>
+        Grad:  {{n.adresa.grad}}
+      </p>
+      <p>
+        Opstina: {{n.adresa.opstina}}
+      </p>
+      <p>
+        Cena: {{n.cena}}
+      </p>
+      <p>
+        Kvadratura: {{n.kvadratura}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div> -->

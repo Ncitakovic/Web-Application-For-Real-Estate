@@ -1,0 +1,198 @@
+
+<br/><br/><br/>
+<h3>Promote property:</h3>
+<form>
+  <table >
+    <tr>
+      <th>naziv nekretnine</th>
+      <th>promovisi</th>
+      <th>otpromovisi</th>
+    </tr>
+    <tr *ngFor='let n of nekretnine'>
+      <td>
+        <span [class.promovisana]='n.promovisana==true'>{{n.naziv}}</span>
+      </td>
+      <td>
+        <button (click)='promovisi(n)'>promovisi</button>
+      </td>
+      <td>
+        <button (click)='otpromovisi(n)'>otpromovisi</button>
+      </td>
+
+    </tr>
+
+
+  </table>
+</form>
+
+<a name='approvePropertyAgent'></a>
+
+<h3>Approve property</h3>
+<form>
+  <table >
+    <tr>
+      <th>naziv nekretnine</th>
+      <th>odobri nekretninu</th>
+    </tr>
+    <tr *ngFor='let n of nekretnine'>
+      <td>
+        <span [class.odobrena]='n.odobrena==true'>{{n.naziv}}</span>
+        <!-- {{n.naziv}} -->
+      </td>
+      <td>
+        <button (click)='odobriNekretninu(n)'>odobri</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+
+<h3>Approve properties for sale</h3>
+
+<table>
+  <tr>
+    <th>Naziv nekretnine</th>
+    <th>ponuda</th>
+    <th>odobri</th>
+  </tr>
+  <tr *ngFor='let p of ponude'>
+    <td>{{p.nazivNekretnine}}</td>
+    <td>{{p.ponuda}}</td>
+    <td>
+      <button (click)='odobri(p)'>Odobri</button>
+    </td>
+  </tr>
+</table>
+
+
+
+<a name='addPropertyAgent'></a>
+
+<h3>Add property:</h3>
+
+<form>
+<table border="1" >
+  <tr>
+    <td> Naziv: </td>
+    <td>
+      <input type="text" name="naziv" [(ngModel)]='novaNekretnina.naziv' >
+    </td>
+  </tr>
+  <tr>
+    <td> Grad: </td>
+    <td>
+      <input type="text" name="grad" [(ngModel)]='novaNekretnina.adresa.grad' >
+    </td>
+  </tr>
+  <tr>
+    <td>  Opstina: </td>
+    <td>
+      <input type="text" name="opstina" [(ngModel)]='novaNekretnina.adresa.opstina'>
+    </td>
+  </tr>
+  <tr>
+    <td> Ulica:</td>
+    <td>
+      <input type="text" name="ulica" [(ngModel)]='novaNekretnina.adresa.ulica'>
+    </td>
+  </tr>
+  <tr>
+    <td> Broj: </td>
+    <td>
+      <input type="text" name="broj" [(ngModel)]='novaNekretnina.adresa.broj'>
+    </td>
+  </tr>
+  <tr>
+    <td> kucaIliStan:</td>
+    <td>
+      <input type="text" name="kucaIliStan" [(ngModel)]='novaNekretnina.kucaIliStan'>
+    </td>
+  </tr>
+  <tr>
+    <td>kucaBrSpratova: </td>
+    <td>
+      <input type="text" name="kucaBrSpratova" [(ngModel)]='novaNekretnina.kucaBrSpratova'>
+    </td>
+  </tr>
+  <tr>
+    <td> stanSprat: </td>
+    <td>
+      <input type="text" name="stanSprat" [(ngModel)]='novaNekretnina.stanSprat'>
+    </td>
+  </tr>
+  <tr>
+    <td> stanUkupnoSpratova: </td>
+    <td>
+      <input type="text" name="stanUkupnoSpratova" [(ngModel)]='novaNekretnina.stanUkupnoSpratova'>
+    </td>
+  </tr>
+  <tr>
+    <td> Kvadratura: </td>
+    <td>
+      <input type="text" name="kvadratura" [(ngModel)]='novaNekretnina.kvadratura'>
+    </td>
+  </tr>
+  <tr>
+    <td> Broj soba: </td>
+    <td>
+      <input type="text" name="brojSoba" [(ngModel)]='novaNekretnina.brSoba'>
+    </td>
+  </tr>
+  <tr>
+    <td> Je namestena:</td>
+    <td>
+      <input type="checkbox" name="jeNamestena" [(ngModel)]='novaNekretnina.jeNamestena'>
+    </td>
+  </tr>
+  <tr>
+    <td>Galerija:</td>
+    <td>
+      <!-- <input type="file" name="galerija" [(ngModel)]='slike'> -->
+      Upload:
+      <input type="file" name="galerijaSlikaAgent" (change)='onFileSelected($event)' multiple>
+      <!-- <input type="text" name="file_path" id="file-path" [(ngModel)]='slike'> -->
+
+    </td>
+  </tr>
+  <tr>
+    <td> Izdaje ili prodaje:</td>
+    <td>
+      <input type="text" name="izdajeIliProdaje" [(ngModel)]='novaNekretnina.izdajeIliProdaje'>
+    </td>
+  </tr>
+  <tr>
+    <td>Cena:</td>
+    <td>
+      <input type="text" name="cena" [(ngModel)]='novaNekretnina.cena'>
+    </td>
+  </tr>
+  <!-- <tr>
+    <td>Vlasnik:</td>
+    <td>
+      <input type="text" name="vlasnik" [(ngModel)]='novaNekretnina.vlasnik'>
+    </td>
+  </tr> -->
+  <tr>
+    <td colspan="2">
+      <button (click)='dodajNekretninu()'>Dodaj nekretninu</button>
+    </td>
+  </tr>
+</table>
+</form>
+
+<a name='chartAgent'></a>
+
+<h3>CHART</h3>
+<button (click)='prikaz()'>Pregledaj nekretnine</button>
+<div id="divChart">
+  <canvas id="myChart"></canvas>
+</div>
+
+<div id="divChart2">
+  <canvas id="myChart2"></canvas>
+</div>
+<div id="divChart34">
+  <canvas id="myChart34"></canvas>
+</div>
+
+

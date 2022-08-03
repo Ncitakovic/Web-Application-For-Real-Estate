@@ -1,0 +1,268 @@
+<br /><br /><br /><br />
+<a name='addUserAdmin'></a>
+<h3>Add user/agent</h3>
+<h4>Choose type:</h4>
+<select [(ngModel)]='tip'>
+  <option value="korisnik">korisnik</option>
+  <option value="agent">agent</option>
+</select>
+<app-register [tip]='tip'></app-register>
+<a name='deleteUpdateUserAdmin'></a>
+<h3>Delete/Update user/agent</h3>
+<form>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>Tip</th>
+      <th>Obrisi</th>
+      <th>Izmeni</th>
+    </tr>
+    <tr *ngFor='let k of korisnici'>
+      <td *ngIf='k.tip!="admin"'>{{k.id}}</td>
+      <td *ngIf='k.tip!="admin"'>{{k.ime}}</td>
+      <td *ngIf='k.tip!="admin"'>{{k.prezime}}</td>
+      <td *ngIf='k.tip!="admin"'>{{k.tip}}</td>
+      <td *ngIf='k.tip!="admin"'>
+        <button (click)='obrisi(k)'>OBRISI</button>
+      </td>
+      <td *ngIf='k.tip!="admin"'>
+        <button (click)='izmeni(k)'>IZMENI</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<table border="1" *ngIf='update == true'>
+  <tr>
+    <td> Ime: </td>
+    <td>
+      <input type="text" name="ime" [(ngModel)]='korisnikZaIzmenu.ime'>
+    </td>
+    <!-- <td>
+      <button (click)=promeniPodatke(ime)>Izmeni</button>
+    </td> -->
+  </tr>
+  <tr>
+    <td> Prezime: </td>
+    <td>
+      <input type="text" name="prezime" [(ngModel)]='korisnikZaIzmenu.prezime'>
+    </td>
+  </tr>
+  <tr>
+    <td> Kor_ime: </td>
+    <td>
+      <input type="text" name="kor_ime" [(ngModel)]='korisnikZaIzmenu.kor_ime'>
+    </td>
+  </tr>
+  <tr>
+    <td> Slika:</td>
+    <td>
+      <input type="file" (change)='onFileSelectedUserAdmin($event)'>
+    </td>
+  </tr>
+  <tr>
+    <td>Mail:</td>
+    <td>
+      <input type="text" name="mail" [(ngModel)]='korisnikZaIzmenu.mail'>
+    </td>
+  </tr>
+  <!-- <tr>
+    <td>Type:</td>
+    <td>
+      <input type="text" name="type" [(ngModel)]='type'>
+    </td>
+  </tr> -->
+  <tr>
+    <td> Grad:</td>
+    <td>
+      <input type="text" name="grad" [(ngModel)]='korisnikZaIzmenu.grad'>
+    </td>
+  </tr>
+  <tr>
+    <td> Drzava:</td>
+    <td>
+      <input type="text" name="drzava" [(ngModel)]='korisnikZaIzmenu.drzava'>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button (click)='promeniPodatke()'>Promeni podatke</button>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------ -->
+<hr />
+<h3>Approve/Deny registration</h3>
+<form>
+  <table>
+    <tr>
+      <th>Ime</th>
+      <th>Prezime</th>
+      <th>odobri</th>
+      <th>odbij</th>
+    </tr>
+    <tr *ngFor='let k of korisnici'>
+      <td *ngIf='k.odobren==false && k.odbijen==false'>{{k.ime}}</td>
+      <td *ngIf='k.odobren==false && k.odbijen==false'>{{k.prezime}}</td>
+      <td *ngIf='k.odobren==false && k.odbijen==false'>
+        <input type="checkbox" name="odobren" [(ngModel)]="k.odobren" (click)='odobri(k.kor_ime)'>
+      </td>
+      <td *ngIf='k.odobren==false && k.odbijen==false'>
+        <input type="checkbox" name="odbijen" [(ngModel)]="k.odbijen" (click)='odbij(k.id)'>
+      </td>
+    </tr>
+  </table>
+</form>
+<hr />
+
+<a name='addPropertyAdmin'></a>
+<h3>Add property:</h3>
+
+<form>
+  <table border="1">
+    <tr>
+      <td> Naziv: </td>
+      <td>
+        <input type="text" name="naziv" [(ngModel)]='novaNekretnina.naziv'>
+      </td>
+    </tr>
+    <tr>
+      <td> Grad: </td>
+      <td>
+        <input type="text" name="grad" [(ngModel)]='novaNekretnina.adresa.grad'>
+      </td>
+    </tr>
+    <tr>
+      <td> Opstina: </td>
+      <td>
+        <input type="text" name="opstina" [(ngModel)]='novaNekretnina.adresa.opstina'>
+      </td>
+    </tr>
+    <tr>
+      <td> Ulica:</td>
+      <td>
+        <input type="text" name="ulica" [(ngModel)]='novaNekretnina.adresa.ulica'>
+      </td>
+    </tr>
+    <tr>
+      <td> Broj: </td>
+      <td>
+        <input type="text" name="broj" [(ngModel)]='novaNekretnina.adresa.broj'>
+      </td>
+    </tr>
+    <tr>
+      <td> kucaIliStan:</td>
+      <td>
+        <input type="text" name="kucaIliStan" [(ngModel)]='novaNekretnina.kucaIliStan'>
+      </td>
+    </tr>
+    <tr>
+      <td>kucaBrSpratova: </td>
+      <td>
+        <input type="text" name="kucaBrSpratova" [(ngModel)]='novaNekretnina.kucaBrSpratova'>
+      </td>
+    </tr>
+    <tr>
+      <td> stanSprat: </td>
+      <td>
+        <input type="text" name="stanSprat" [(ngModel)]='novaNekretnina.stanSprat'>
+      </td>
+    </tr>
+    <tr>
+      <td> stanUkupnoSpratova: </td>
+      <td>
+        <input type="text" name="stanUkupnoSpratova" [(ngModel)]='novaNekretnina.stanUkupnoSpratova'>
+      </td>
+    </tr>
+    <tr>
+      <td> Kvadratura: </td>
+      <td>
+        <input type="text" name="kvadratura" [(ngModel)]='novaNekretnina.kvadratura'>
+      </td>
+    </tr>
+    <tr>
+      <td> Broj soba: </td>
+      <td>
+        <input type="text" name="brojSoba" [(ngModel)]='novaNekretnina.brSoba'>
+      </td>
+    </tr>
+    <tr>
+      <td> Je namestena:</td>
+      <td>
+        <input type="checkbox" name="jeNamestena" [(ngModel)]='novaNekretnina.jeNamestena'>
+      </td>
+    </tr>
+    <tr>
+      <td>Galerija:</td>
+      <td>
+        Upload:
+        <input type="file" name="galerijaSlikaAdmin" (change)='onFileSelected($event)' multiple>
+      </td>
+    </tr>
+    <tr>
+      <td> Izdaje ili prodaje:</td>
+      <td>
+        <input type="text" name="izdajeIliProdaje" [(ngModel)]='novaNekretnina.izdajeIliProdaje'>
+      </td>
+    </tr>
+    <tr>
+      <td>Cena:</td>
+      <td>
+        <input type="text" name="cena" [(ngModel)]='novaNekretnina.cena'>
+      </td>
+    </tr>
+    <tr>
+      <td>Vlasnik:</td>
+      <td>
+        <input type="text" name="vlasnik" [(ngModel)]='novaNekretnina.vlasnik'>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)='dodajNekretninu()'>Dodaj nekretninu</button>
+      </td>
+    </tr>
+  </table>
+</form>
+<a name='approvePropertyAdmin'></a>
+<h3>Approve property</h3>
+<form>
+  <table>
+    <tr>
+      <th>naziv nekretnine</th>
+      <th>odobri nekretninu</th>
+    </tr>
+    <tr *ngFor='let n of nekretnine'>
+      <td>
+        <span [class.odobrena]='n.odobrena==true'>{{n.naziv}}</span>
+      </td>
+      <td>
+        <button (click)='odobriNekretninu(n)'>odobri</button>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<hr />
+<a name='chartAdmin'></a>
+<h3>CHART</h3>
+<button (click)='prikaz()'>Pregledaj nekretnine</button>
+<div id="divChart_">
+  <canvas id="myChart_"></canvas>
+</div>
+
+<div id="divChart2_">
+  <canvas id="myChart2_"></canvas>
+</div>
+<div id="divChart34_">
+  <canvas id="myChart34_"></canvas>
+</div>

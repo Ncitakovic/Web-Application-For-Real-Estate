@@ -1,0 +1,19 @@
+#divChart_ {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+#divChart2_ {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+#divChart34_ {
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+
+.odobrena {
+  color: green;
+}
