@@ -1,0 +1,14 @@
+{
+    "_id" : ObjectId("60f0164869b2673b441ee1ab"),
+    "idN" : 3,
+    "datumOd" : ISODate("2021-07-19T00:00:00.000Z"),
+    "datumDo" : ISODate("2021-07-21T00:00:00.000Z"),
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60f016f369b2673b441ee1ae"),
+    "idN" : 3,
+    "datumOd" : ISODate("2021-07-24T00:00:00.000Z"),
+    "datumDo" : ISODate("2021-07-25T00:00:00.000Z"),
+    "__v" : 0
+}
