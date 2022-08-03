@@ -1,0 +1,126 @@
+{
+    "_id" : ObjectId("60bbc971d760fa7639248bbb"),
+    "id" : 2,
+    "ime" : "Pera",
+    "prezime" : "Peric",
+    "kor_ime" : "pera",
+    "lozinka" : "Pera123@",
+    "slika" : "pera.jpg",
+    "mail" : "pera@gmail.com",
+    "grad" : "Beograd",
+    "drzava" : "Srbija",
+    "tip" : "korisnik",
+    "odobren" : true,
+    "odbijen" : false
+}
+{
+    "_id" : ObjectId("60cb1eade53da71c78c81245"),
+    "id" : 3,
+    "ime" : "Zika",
+    "prezime" : "Zikic",
+    "kor_ime" : "zika",
+    "lozinka" : "Zika123@",
+    "grad" : "Nis",
+    "drzava" : "Srbija",
+    "slika" : "zika.jpg",
+    "mail" : "zika@gmail.com",
+    "odobren" : true,
+    "odbijen" : false,
+    "tip" : "agent",
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60d7019f436af72330c185cc"),
+    "id" : 4,
+    "ime" : "Mika",
+    "prezime" : "Mikic",
+    "kor_ime" : "mika",
+    "lozinka" : "Mika123@",
+    "grad" : "Novi Sad",
+    "drzava" : "Srbija",
+    "slika" : "mika.jpg",
+    "mail" : "mika@gmail.com",
+    "odobren" : true,
+    "odbijen" : false,
+    "tip" : "korisnik",
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60d782d5b614d8146c580a9e"),
+    "ime" : "Vlada",
+    "prezime" : "Vladic",
+    "kor_ime" : "vlada",
+    "lozinka" : "Vlada123!",
+    "grad" : "Novi Sad",
+    "drzava" : "Srbija",
+    "slika" : "generic.jpg",
+    "mail" : "vlada@gmail.com",
+    "odobren" : true,
+    "odbijen" : false,
+    "tip" : "korisnik",
+    "id" : 5,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60d87261307c8000b14ccf6e"),
+    "ime" : "admin",
+    "prezime" : "adminovic",
+    "kor_ime" : "admin",
+    "lozinka" : "Admin123!",
+    "grad" : "Beograd",
+    "drzava" : "Srbija",
+    "slika" : "generic.jpg",
+    "mail" : "admin@gmail.com",
+    "odobren" : true,
+    "odbijen" : false,
+    "tip" : "admin",
+    "id" : 6
+}
+{
+    "_id" : ObjectId("60dc41475dfa8322dccb78e2"),
+    "ime" : "Petar",
+    "prezime" : "Petrovic",
+    "kor_ime" : "petar",
+    "lozinka" : "Petar123!",
+    "grad" : "Beograd",
+    "drzava" : "Srbija",
+    "slika" : "zika.jpg",
+    "mail" : "petar@gmail.com",
+    "odobren" : false,
+    "odbijen" : false,
+    "tip" : "korisnik",
+    "id" : 7,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60e55373a1a5b54990911dc2"),
+    "ime" : "Filip",
+    "prezime" : "Filipovic",
+    "kor_ime" : "fica",
+    "lozinka" : "Fica123@",
+    "grad" : "Bg",
+    "drzava" : "Srb",
+    "slika" : "businessman-character-avatar-isolated_24877-60111.jpg",
+    "mail" : "fica@gmail.com",
+    "odobren" : true,
+    "odbijen" : false,
+    "tip" : "korisnik",
+    "id" : 8,
+    "__v" : 0
+}
+{
+    "_id" : ObjectId("60bbc95bd760fa7639248bb8"),
+    "id" : 1,
+    "ime" : "Luka",
+    "prezime" : "Lukic",
+    "kor_ime" : "luka",
+    "lozinka" : "Luka123@",
+    "grad" : "becici",
+    "drzava" : "Montenegro",
+    "slika" : "mika.jpg",
+    "mail" : "luka@gmail.com",
+    "tip" : "korisnik",
+    "odobren" : true,
+    "odbijen" : false,
+    "__v" : 0
+}
