@@ -1,0 +1,7 @@
+backend:
+-npm install multer
+
+frontend:
+-npm install chart.js
+-npm i ngx-cookie-service
+  
