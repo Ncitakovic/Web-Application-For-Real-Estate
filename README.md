@@ -13,11 +13,11 @@ Installation:
 2. FRONTEND
 - install Angular
 3. BACKEND
-npm install -g typescript
+- npm install -g typescript
 4. DATABASE
-install MongoDB
-install MongoDBCompass
-install Robo3T
+- install MongoDB
+- install MongoDBCompass
+- install Robo3T
 
 How to start the project:
 1) Download Code ZIP and extract files to a new folder
