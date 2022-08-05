@@ -1,12 +1,22 @@
 backend:
-express: https://expressjs.com/en/starter/installing.html
-cors: https://www.npmjs.com/package/cors
-bodyParser: https://www.npmjs.com/package/body-parser
-mongoose: https://www.npmjs.com/package/mongoose
-multer: https://www.npmjs.com/package/multer
-type-multer: https://www.npmjs.com/package/@types/multer
+express (https://expressjs.com/en/starter/installing.html):
+-npm install express
+cors (https://www.npmjs.com/package/cors):
+-npm install cors
+bodyParser (https://www.npmjs.com/package/body-parser):
+-npm install body-parser
+mongoose (https://www.npmjs.com/package/mongoose):
+-npm install mongoose
+multer (https://www.npmjs.com/package/multer):
+-npm install --save multer
+type-multer (https://www.npmjs.com/package/@types/multer):
+-npm install --save @types/multer
+
+-------------------------------------------------------------------------------
 
 frontend:
+chart.js (https://www.chartjs.org/docs/latest/getting-started/installation.html):
 -npm install chart.js
+ngx-cookie-service (https://www.npmjs.com/package/ngx-cookie-service):
 -npm i ngx-cookie-service
   
