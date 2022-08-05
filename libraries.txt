@@ -1,6 +1,13 @@
 backend:
 -npm install multer
 
+express: https://expressjs.com/en/starter/installing.html
+cors: https://www.npmjs.com/package/cors
+bodyParser: https://www.npmjs.com/package/body-parser
+mongoose: https://www.npmjs.com/package/mongoose
+multer: https://www.npmjs.com/package/multer
+type-multer: https://www.npmjs.com/package/@types/multer
+
 frontend:
 -npm install chart.js
 -npm i ngx-cookie-service
