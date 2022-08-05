@@ -1,11 +1,11 @@
 # Web-Application-For-Real-Estate
 
-frontend: Angular 2+ framework
-backend: Express and NodeJS
-database: non-relational MongoDB
-
 This project is mandatory project on Internet Applications Programming course.
 All the project requirements can be found in the description folder.
+
+- frontend: Angular 2+ framework
+- backend: Express and NodeJS
+- database: non-relational MongoDB
 
 Installation:
 1. NODE.JS
