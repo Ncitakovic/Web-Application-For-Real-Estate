@@ -25,6 +25,6 @@ How to start the project:
 3) Open two Comand Prompt windows and locate to the frontend and the backend folders
 4) Install all the libraries from libraries.txt
 5) In backend cmd type two commands (and press enter after each command):
-"tsc"
+"tsc",
 "npm start"
 6) In frontend cmd type command (and press enter): "ng serve --open"
